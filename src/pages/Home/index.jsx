@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState, useEffect, useCallback, useContext } from "react";
 import { BuyContext } from "../../App";
 
-export const Home = ({handleSelect, setArr}) => {
-  const { setCartItems, setProductList, productList } = useContext(BuyContext);
+export const Home = () => {
+  const { setProductList, productList, handleSelect, setArr } = useContext(BuyContext);
 
   useEffect(() => {
     (async () => {

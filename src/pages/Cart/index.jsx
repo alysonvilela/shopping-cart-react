@@ -1,8 +1,10 @@
 import { BuyContext } from "../../App";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Cart = ({ handleSelect }) => {
-  const { productList, cartItems } = useContext(BuyContext);
+export const Cart = () => {
+  const { productList, cartItems, handleSelect } = useContext(BuyContext);
+  const navigate = useNavigate()
 
   const cartProducts = productList
     .filter((g) => cartItems.includes(g.id))
@@ -49,7 +51,6 @@ export const Cart = ({ handleSelect }) => {
           <ul>
             <li className="items">
               <h2 className="text-secondary-12 mb-5 text-lg">Produtos</h2>
-              <div className="border-t border-secondary-2 mb-4" />
               <ul className="text-secondary-11 mb-5">
                 {cartProducts?.map(({ product, price }) => (
                   <li className="flex flex-row justify-between w-full">
@@ -66,6 +67,7 @@ export const Cart = ({ handleSelect }) => {
             </li>
           </ul>
         </article>
+        <button onClick={() => navigate('/checkout')} disabled={cartItems.length === 0} className="bg-primary-3 hover:bg-primary-4 text-primary-11 py-5 mt-4 w-full rounded-lg disabled:bg-secondary-5 disabled:text-secondary-11"> Finalizar Compra </button>
       </div>
     </section>
   );

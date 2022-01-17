@@ -10,6 +10,7 @@ module.exports = {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         cursive: ['Lobster', ...defaultTheme.fontFamily.sans]
       },
+      
       colors: {
         primary: {
               1: 'hsl(250, 20.0%, 10.2%)',
