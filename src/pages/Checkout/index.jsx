@@ -11,6 +11,7 @@ export const Checkout = () => {
     stepTwo: false,
     stepThree: false,
   });
+  
   const [finish, setFinish] = useState(false)
 
   const toggle = useCallback(
@@ -18,7 +19,6 @@ export const Checkout = () => {
       if (selected === index) {
         return setSelected(null);
       }
-
 
       return setSelected(index);
     },
@@ -40,9 +40,9 @@ export const Checkout = () => {
           list={[
             {
               id: 1,
-              title: "Endereço",
+              title: `${validation.stepOne ? "✓" : "✗"} Endereço`,
               content: (
-                <>
+                 <>
                   <ContentSimulation phase={1} />
                   <button
                     className="mb-5 bg-gray-600 px-4 py-3"
@@ -63,7 +63,7 @@ export const Checkout = () => {
             },
             {
               id: 2,
-              title: "Frete",
+              title: `${validation.stepTwo ? "✓" : "✗"} Frete`,
               content: (
                 <>
                   <ContentSimulation phase={2} />
@@ -86,7 +86,7 @@ export const Checkout = () => {
             },
             {
               id: 3,
-              title: "Pagamento",
+              title: `${validation.stepThree ? "✓" : "✗"} Pagamento`,
               content: (
                 <>
                   <ContentSimulation phase={4} />
