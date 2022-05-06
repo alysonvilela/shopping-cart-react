@@ -41,14 +41,13 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
-          <Route
+          {cartItems.length > 0 && <Route path="checkout" element={<Checkout />} />}
+          {/* <Route
             path="checkout"
             element={<PrivateRoute auth={cartItems.length > 0} href="/" />}
           >
-          <Route
-            path=""
-            element={<Checkout />}
-          /></Route>
+            <Route path="" element={<Checkout />} />
+          </Route> */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

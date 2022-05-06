@@ -1,0 +1,33 @@
+/* stylelint-disable unit-blacklist */
+
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: start;
+  transition: color 0.5s ease-out;
+}
+
+.title:hover h2 {
+  color: #0061AB;
+}
+
+.show {
+  color: #0061AB;
+  transition: transform 0.2s ease-out;
+}
+
+.show svg {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-out;
+}
+
+svg {
+  transition: transform 0.2s ease-out;
+}
+

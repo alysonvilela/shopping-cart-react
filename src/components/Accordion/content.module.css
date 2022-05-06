@@ -1,0 +1,29 @@
+/* stylelint-disable unit-blacklist */
+.content {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 24px;
+  color: #000000;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(1, 0, 1, 0), height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5 cubic-bezier(0, 1, 0, 1), padding-top 0.5 cubic-bezier(0, 1, 0, 1);
+}
+
+.content h2,
+.content h3,
+.content h4 {
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.content article section:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+.show {
+  height: auto;
+  max-height: 100%;
+  padding: 16px 24px;
+  border-top: 1px solid #DEDEDE;
+  opacity: 1;
+  transition: max-height 0.5s cubic-bezier(1, 0, 1, 0), height 0.5 cubic-bezier(0, 1, 0, 1), opacity 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 2s cubic-bezier(0, 1, 0, 1), padding-top 2s cubic-bezier(0, 1, 0, 1);
+}

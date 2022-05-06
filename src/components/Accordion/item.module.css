@@ -1,0 +1,18 @@
+/* stylelint-disable unit-blacklist */
+.item {
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+}
+.item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+.item:only-child {
+  border-radius: 8px;
+}
+.item:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.item:not(:first-child) {
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
